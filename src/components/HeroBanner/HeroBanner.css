@@ -1,0 +1,67 @@
+.hero-banner {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  aspect-ratio: 21 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-carousel img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  transition: opacity 0.5s;
+}
+
+.banner-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.banner-controls button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.banner-controls button:hover {
+  background: var(--uol-white);
+}
+
+@media (max-width: 768px) {
+  .banner-carousel {
+    aspect-ratio: 16 / 9;
+  }
+} 

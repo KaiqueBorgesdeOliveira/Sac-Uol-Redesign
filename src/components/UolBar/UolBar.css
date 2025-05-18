@@ -1,0 +1,166 @@
+.custom-uol-bar {
+  width: 100%;
+  background: #232323;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 16px 16px 0 0;
+  padding-left: 32px;
+  margin: 0 auto 0 auto;
+  max-width: 1366px;
+  box-sizing: border-box;
+  position: relative;
+  top: -16px;
+  z-index: 10;
+  justify-content: flex-start;
+}
+
+.uol-logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 32px;
+}
+
+.uol-logo-svg {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.custom-uol-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+
+.custom-uol-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 12px;
+  transition: color 0.2s;
+  position: relative;
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: normal;
+}
+
+.custom-uol-nav .nav-link:hover {
+  color: var(--uol-yellow);
+}
+
+.uol-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+.bar-action {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  gap: 6px;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.bar-action span {
+  position: relative;
+  z-index: 1;
+}
+
+.bar-action::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--uol-yellow);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.bar-action:hover,
+.bar-action:focus {
+  color: var(--uol-yellow);
+}
+
+.bar-action:hover::after,
+.bar-action:focus::after {
+  transform: scaleX(1);
+}
+
+.bar-action svg {
+  transition: filter 0.3s, color 0.3s;
+}
+
+.bar-action:hover svg,
+.bar-action:focus svg {
+  filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(-20deg) drop-shadow(0 0 2px var(--uol-yellow));
+}
+
+.bar-action:hover svg *,
+.bar-action:focus svg * {
+  stroke: var(--uol-yellow) !important;
+  fill: var(--uol-yellow) !important;
+}
+
+@media (max-width: 1400px) {
+  .custom-uol-bar {
+    max-width: 98vw;
+    padding-left: 12px;
+  }
+  .uol-bar-actions {
+    gap: 12px;
+    margin-right: 12px;
+  }
+  .uol-logo-link {
+    margin-right: 12px;
+  }
+  .custom-uol-nav {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .custom-uol-nav {
+    gap: 18px;
+  }
+  .custom-uol-nav .nav-link {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-uol-nav {
+    gap: 8px;
+  }
+  .custom-uol-nav .nav-link {
+    font-size: 14px;
+    padding: 0 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-uol-nav {
+    gap: 4px;
+  }
+  .custom-uol-nav .nav-link {
+    font-size: 13px;
+    padding: 0 2px;
+  }
+  
+  .bar-action span {
+    display: none;
+  }
+} 

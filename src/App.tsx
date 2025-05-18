@@ -1,34 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useEffect } from 'react'
 import './App.css'
+import UolBar from './components/UolBar/UolBar'
+import Header from './components/Header/Header'
+import HeroBanner from './components/HeroBanner/HeroBanner'
+import QuickActions from './components/QuickActions/QuickActions'
+import HelpSearch from './components/HelpSearch/HelpSearch'
+import Products from './components/Products/Products'
+import AppDownload from './components/AppDownload/AppDownload'
+import Contact from './components/Contact/Contact'
+import FooterLinks from './components/FooterLinks/FooterLinks'
+import Footer from './components/Footer/Footer'
+import { AppProvider } from './context/AppContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    document.documentElement.classList.remove('no-js')
+
+    const handleResize = () => {
+      const width = window.innerWidth
+      const produtosItems = document.querySelectorAll('.produtos-item')
+      
+      produtosItems.forEach(item => {
+        if (width <= 768) {
+          (item as HTMLElement).style.flex = '0 0 50%'
+        } else if (width <= 480) {
+          (item as HTMLElement).style.flex = '0 0 100%'
+        } else {
+          (item as HTMLElement).style.flex = '0 0 25%'
+        }
+      })
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <AppProvider>
+      <div className="container">
+        <UolBar />
+        <Header />
+        <main>
+          <HeroBanner />
+          <QuickActions />
+          <HelpSearch />
+          <Products />
+          <AppDownload />
+          <Contact />
+          <FooterLinks />
+          {/* Outros componentes serão adicionados aqui */}
+        </main>
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </AppProvider>
   )
 }
 

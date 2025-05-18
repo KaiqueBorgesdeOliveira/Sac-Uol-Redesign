@@ -1,0 +1,95 @@
+.app-download {
+  margin-top: 64px;
+  background: none;
+  padding: 60px 0;
+  padding-top: 24px;
+}
+
+.app-download-banner.novo-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFD200;
+  border-radius: 16px;
+  padding: 40px 48px;
+  margin: 0 auto 48px auto;
+  max-width: 1100px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  gap: 48px;
+}
+
+.app-download-banner.novo-layout .qr-code {
+  width: 120px;
+  height: 120px;
+  margin: 0 48px 0 0;
+  flex-shrink: 0;
+}
+
+.app-download-center {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.app-download-center .icon-phone {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+}
+
+.app-download-center .app-download-text {
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  min-width: 0;
+}
+
+.app-download-center .app-download-text strong,
+.app-download-center .app-download-text span {
+  font-weight: 700;
+}
+
+.app-download-center .app-download-text .subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.app-download-banner.novo-layout .app-download-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-left: 48px;
+}
+
+.app-download-banner.novo-layout .app-download-buttons img {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .app-download-banner.novo-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .app-download-center {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .app-download-banner.novo-layout .qr-code {
+    margin: 0;
+  }
+
+  .app-download-banner.novo-layout .app-download-buttons {
+    margin: 0;
+  }
+} 

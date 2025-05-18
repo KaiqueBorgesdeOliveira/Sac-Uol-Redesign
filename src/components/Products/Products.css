@@ -1,0 +1,151 @@
+.banner-propagandas {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 64px;
+}
+
+.produtos-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #333;
+  padding: 22px 28px 12px 0;
+  background: none;
+  position: relative;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.produtos-title .faq-title-bar {
+  display: inline-block;
+  width: 6px;
+  height: 32px;
+  background: var(--uol-yellow);
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.produtos-nav {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.produtos-carousel {
+  position: relative;
+}
+
+.produtos-items {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.produtos-item {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 10px;
+}
+
+.produto-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  padding: 20px 0 0 0;
+}
+
+.produto-card img {
+  display: block;
+  margin: 0 auto;
+  max-width: 140px;
+  max-height: 90px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.produto-nome {
+  width: 100%;
+  background: #f5f5f5;
+  color: #333;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 18px 0 12px 0;
+  margin-top: auto;
+}
+
+.produto-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.nav-button {
+  background: var(--uol-white);
+  border: 1px solid #E5E5E5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: var(--uol-light-gray);
+  border-color: var(--uol-gray);
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-button .material-icons {
+  color: var(--uol-gray);
+}
+
+@media (max-width: 768px) {
+  .produtos-item {
+    flex: 0 0 50%;
+  }
+
+  .produtos-carousel {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos-item {
+    flex: 0 0 100%;
+  }
+} 
