@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# SAC UOL Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de redesign do SAC UOL utilizando React, Vite e TypeScript, com foco em responsividade, identidade visual moderna e experiência do usuário aprimorada.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
+- **React** (com TypeScript)
+- **Vite** (build e dev server)
+- **CSS Modules** e CSS customizado
+- **Context API** para gerenciamento de estado
+- **Material Icons** (Google Fonts)
+- **Git/GitHub** para versionamento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Estrutura do Projeto
+```
+Sac-Uol-Redesign/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── UolBar/           # Barra superior preta (menu)
+│   │   ├── Header/           # Cabeçalho e logo
+│   │   ├── HeroBanner/       # Banner principal
+│   │   ├── QuickActions/     # Ações rápidas
+│   │   ├── HelpSearch/       # Busca e FAQ
+│   │   ├── Products/         # Navegação de produtos
+│   │   ├── AppDownload/      # Banner de download do app
+│   │   ├── Contact/          # Seção de contato
+│   │   ├── FooterLinks/      # Links do rodapé (expansível)
+│   │   └── Footer/           # Rodapé final
+│   ├── context/              # Context API
+│   ├── App.tsx               # Composição principal
+│   └── App.css               # Estilos globais
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Passo a Passo para Rodar o Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/KaiqueBorgesdeOliveira/Sac-Uol-Redesign.git
+   cd Sac-Uol-Redesign
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. **Rode o projeto em modo desenvolvimento:**
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+   O Vite irá iniciar o servidor local. Acesse o endereço exibido no terminal (geralmente http://localhost:5173).
+
+4. **Build para produção:**
+   ```bash
+   npm run build
+   # ou
+   yarn build
+   ```
+
+5. **Preview do build:**
+   ```bash
+   npm run preview
+   # ou
+   yarn preview
+   ```
+
+## Funcionalidades e Customizações
+- Layout responsivo (desktop, tablet, mobile)
+- Barra superior preta (UolBar) com menu hambúrguer e ícones
+- Seções alinhadas e espaçamento ajustado conforme identidade visual
+- Botão "Mais informações" que expande/recolhe links do rodapé
+- FAQ e navegação de produtos com carrossel
+- Banner de download do app com QR Code
+- Seção de contato com botões de WhatsApp e chat
+- Utilização de variáveis CSS para cores e espaçamentos
+
+## Como contribuir
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature/fix: `git checkout -b minha-feature`
+3. Commit suas alterações: `git commit -m "feat: minha feature"`
+4. Push para o seu fork: `git push origin minha-feature`
+5. Abra um Pull Request
+
+---
+
+Para dúvidas ou sugestões, abra uma issue no repositório!
