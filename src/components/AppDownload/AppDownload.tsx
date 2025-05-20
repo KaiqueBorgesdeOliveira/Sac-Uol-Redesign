@@ -7,7 +7,7 @@ const AppDownload: React.FC = () => {
       <div className="app-download-banner novo-layout">
         <img src="/assets/images/codigo-barras.png" alt="QR Code para download" className="qr-code" />
         <div className="app-download-center">
-          <img src="/assets/images/icone-phone-cel.svg" alt="Celular" className="icon-phone" />
+          <img src="/assets/images/Icone-phone-cel.svg" alt="Celular" className="icon-phone" />
           <div className="app-download-text">
             Baixe agora o <strong>App <span>Meu UOL</span></strong><br />
             <span className="subtitle">e facilite seu dia a dia!</span>

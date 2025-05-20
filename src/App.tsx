@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import UolBar from './components/UolBar/UolBar'
 import Header from './components/Header/Header'
@@ -39,6 +39,9 @@ function App() {
     }
   }, [])
 
+  // Estado para controlar o footer
+  const [isFooterOpen, setIsFooterOpen] = useState(false);
+
   return (
     <AppProvider>
       <div className="container">
@@ -51,7 +54,22 @@ function App() {
           <Products />
           <AppDownload />
           <Contact />
-          <FooterLinks />
+          {/* Botão Mais informações */}
+          <div className="more-info">
+            <button
+              type="button"
+              className={`more-info-btn${isFooterOpen ? ' open' : ''}`}
+              onClick={() => setIsFooterOpen((open) => !open)}
+            >
+              <span className="more-info-text">Mais informações</span>
+              <span className="material-icons more-info-icon">
+                {isFooterOpen ? 'expand_less' : 'expand_more'}
+              </span>
+              <span className="more-info-underline"></span>
+            </button>
+          </div>
+          {/* FooterLinks controlado pelo estado */}
+          {isFooterOpen && <FooterLinks />}
           {/* Outros componentes serão adicionados aqui */}
         </main>
         <Footer />

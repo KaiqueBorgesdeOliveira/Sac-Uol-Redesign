@@ -12,6 +12,7 @@
   top: -16px;
   z-index: 10;
   justify-content: flex-start;
+  padding: 0 24px;
 }
 
 .uol-logo-link {
@@ -19,7 +20,7 @@
   align-items: center;
   height: 100%;
   margin-left: 16px;
-  margin-right: 32px;
+  margin-right: 16px;
 }
 
 .uol-logo-svg {
@@ -32,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 8px;
   width: auto;
   flex: 1 1 0%;
   min-width: 0;
