@@ -78,14 +78,14 @@
     padding: 16px;
   }
 
+  .app-download-banner.novo-layout .qr-code {
+    display: none;
+  }
+
   .app-download-center {
     flex-direction: column;
     gap: 8px;
     text-align: center;
-  }
-
-  .app-download-banner.novo-layout .qr-code {
-    margin: 0;
   }
 
   .app-download-banner.novo-layout .app-download-buttons {
