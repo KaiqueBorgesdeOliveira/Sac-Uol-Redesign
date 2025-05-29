@@ -1,5 +1,8 @@
 .quick-actions {
   margin: 24px 0 16px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .action-grid {

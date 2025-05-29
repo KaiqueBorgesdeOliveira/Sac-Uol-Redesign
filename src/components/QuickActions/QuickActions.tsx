@@ -3,7 +3,7 @@ import './QuickActions.css';
 
 const QuickActions: React.FC = () => {
   return (
-    <section className="quick-actions sessao-centralizada">
+    <section className="quick-actions">
       <div className="action-grid">
         <a href="#" className="action-item">
           <img src="/assets/images/Icone-meios-de-pagamento-60x60px.svg" alt="Ícone Meus Débitos" />
