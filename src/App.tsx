@@ -11,6 +11,7 @@ import Contact from './components/Contact/Contact'
 import FooterLinks from './components/FooterLinks/FooterLinks'
 import Footer from './components/Footer/Footer'
 import { AppProvider } from './context/AppContext'
+import ChatBotPopup from './components/ChatBotPopup/ChatBotPopup'
 
 function App() {
   useEffect(() => {
@@ -74,6 +75,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <ChatBotPopup />
     </AppProvider>
   )
 }

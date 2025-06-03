@@ -6,7 +6,7 @@ const Products: React.FC = () => {
     const { produtos, currentSlide, itemsPerPage, nextSlide, prevSlide } = useApp();
 
     // Ajuste para garantir que o último card possa ser exibido
-    const maxSlide = Math.max(produtos.length - itemsPerPage, 0);
+    const maxSlide = Math.max(produtos.length - 1, 0);
     const slide = Math.min(currentSlide, maxSlide);
     // Novo cálculo: porcentagem baseada na quantidade de itens visíveis
     const percent = 100 / itemsPerPage;

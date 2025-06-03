@@ -39,7 +39,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     };
 
     const nextSlide = () => {
-        if (currentSlide < produtos.length - itemsPerPage) {
+        if (currentSlide < produtos.length - 1) {
             setCurrentSlide(currentSlide + 1);
         }
     };
